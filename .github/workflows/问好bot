@@ -1,0 +1,24 @@
+import datetime
+import requests
+import json
+
+while True:
+    current_time = datetime.datetime.now()
+    if current_time.hour == 8 and current_time.minute == 0 and current_time.second == 0:
+        url = "https://a1.fanbook.mobi/api/bot/机器人令牌/sendMessage"
+        headers = {'content-type': "application/json;charset=utf-8"}
+        jsonfile = json.dumps({
+            "chat_id": "频道ID（证书）",
+            "text": "早上好"
+        })
+        postreturn = requests.post(url, data=jsonfile, headers=headers)
+        print(postreturn.text)
+    elif current_time.hour == 20 and current_time.minute == 0 and current_time.second == 0:
+        url = "https://a1.fanbook.mobi/api/bot/机器人令牌/sendMessage"
+        headers = {'content-type': "application/json;charset=utf-8"}
+        jsonfile = json.dumps({
+            "chat_id": "频道ID（证书）",
+            "text": "晚上好"
+        })
+        postreturn = requests.post(url, data=jsonfile, headers=headers)
+        print(postreturn.text)
