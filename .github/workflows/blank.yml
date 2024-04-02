@@ -1,4 +1,3 @@
-#导入模块
 导入日期时间
 导入请求
 导入json
@@ -6,19 +5,19 @@
 while True:
 current_time=datetime.datetime.now()
 如果current_time.hour==8，current_time.minute==0，current_time.second==0:
-URL="https://a1.fanbook.mobi/api/bot/机器人令牌/SendMessage"#令牌自己填写
+URL="https://a1.fanbook.mobi/api/bot/机器人令牌/SendMessage"
 headers={'content-type':"application/json；charset=utf-8"}
 JsonFile=json.dumps({
-"chat_id":"频道ID",
+"chat_id":"频道ID(证书)",
 "文本":"早上好"
-        })#chat_id自己填写
+        })
 postreturn=requests.post(url，data=JsonFile，headers=headers)
 打印(postreturn.text)
 Elif current_time.hour==20和current_time.minute==0和current_time.second==0:
 URL="https://a1.fanbook.mobi/api/bot/机器人令牌/SendMessage"
 headers={'content-type':"application/json；charset=utf-8"}
 JsonFile=json.dumps({
-"chat_id":"频道ID",
+"chat_id":"频道ID(证书)",
 "文本":"晚上好"
         })
 postreturn=requests.post(url，data=JsonFile，headers=headers)
