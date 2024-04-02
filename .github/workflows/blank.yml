@@ -1,3 +1,4 @@
+#导入模块
 导入日期时间
 导入请求
 导入json
@@ -5,20 +6,41 @@
 while True:
 current_time=datetime.datetime.now()
 如果current_time.hour==8，current_time.minute==0，current_time.second==0:
-URL="https://a1.fanbook.mobi/api/bot/9fe6edcba2eeb8f0ab3e58c02aa58d9c1ade2f9f8dca9c981df61aebd43cf924338470556eb63addd26a98242d9f8245/sendMessage"
+URL="https://a1.fanbook.mobi/api/bot/机器人令牌/SendMessage"#令牌自己填写
 headers={'content-type':"application/json；charset=utf-8"}
 JsonFile=json.dumps({
-"chat_id":"461011298583687168",
+"chat_id":"频道ID",
 "文本":"早上好"
-        })
+        })#chat_id自己填写
 postreturn=requests.post(url，data=JsonFile，headers=headers)
 打印(postreturn.text)
 Elif current_time.hour==20和current_time.minute==0和current_time.second==0:
-URL="https://a1.fanbook.mobi/api/bot/9fe6edcba2eeb8f0ab3e58c02aa58d9c1ade2f9f8dca9c981df61aebd43cf924338470556eb63addd26a98242d9f8245/sendMessage"
+URL="https://a1.fanbook.mobi/api/bot/机器人令牌/SendMessage"
 headers={'content-type':"application/json；charset=utf-8"}
 JsonFile=json.dumps({
-"chat_id":"461011298583687168",
+"chat_id":"频道ID",
 "文本":"晚上好"
         })
 postreturn=requests.post(url，data=JsonFile，headers=headers)
 打印(postreturn.text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
