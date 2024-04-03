@@ -8,8 +8,8 @@ while True:
         url = "https://a1.fanbook.mobi/api/bot/机器人令牌/sendMessage"
         headers = {'content-type': "application/json;charset=utf-8"}
         jsonfile = json.dumps({
-            "chat_id": "频道ID（证书）",
-            "text": "早上好"
+            "chat_id": "频道ID",
+            "text": "早上好,用你的方式开启新的一天！"
         })
         postreturn = requests.post(url, data=jsonfile, headers=headers)
         print(postreturn.text)
@@ -18,7 +18,7 @@ while True:
         headers = {'content-type': "application/json;charset=utf-8"}
         jsonfile = json.dumps({
             "chat_id": "频道ID（证书）",
-            "text": "晚上好"
+            "text": "到晚上了，记得早点睡觉哦！"
         })
         postreturn = requests.post(url, data=jsonfile, headers=headers)
         print(postreturn.text)
